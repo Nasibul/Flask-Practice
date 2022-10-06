@@ -13,12 +13,11 @@
 
 <body>
  <div class="login">
-	<h1>Predict House Price</h1>
+	<h1>Predict Illness</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-  <form action="{{ url_for('predict')}}"method="post">
-		<input type="text" name="age" placeholder="Age" required="required" />
-    <input type="text" name="income" placeholder="Income" required="required" />
+  <form action="{{ url_for('predict')}}" method="post">
+    <label for="City">Choose a city:</label>
 		<select name="City" id="City"/>
       <option value="Dallas">Dallas</option>>
       <option value="New York City">New York City</option>>
@@ -27,10 +26,20 @@
       <option value="Washington D.C.">Washington D.C.</option>>
       <option value="San Diego">San Diego</option>>
       <option value="Austin">Austin</option>>
-    <select name="Gender" id="Gender"/>
-      <option value="Male">Male</option>>
-      <option value="Female">Female</option>>
+    </select>
+    <br><br>
     
+    <label for="Gender">Choose a gender:</label>
+    <select name="Gender" id="Gender"/>
+        <option value="Male">Male</option>>
+        <option value="Female">Female</option>>
+    </select>
+    <br><br>
+    
+    <input type="text" name="age" placeholder="Age" required="required" />
+    <br><br>
+
+    <input type="text" name="income" placeholder="Income" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
